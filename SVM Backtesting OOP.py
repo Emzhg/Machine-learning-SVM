@@ -298,7 +298,7 @@ class Data_json:
 class LinearSvmClassifier:
     
     def __init__(self, C):
-        self.C = C                                 # <---
+        self.C = C                                 
         self.alpha = None
         self.w = None
         self.supportVectors = None
@@ -441,7 +441,6 @@ if __name__ == '__main__':
 
     # Testing
     # Imports
-    # https://github.com/rbhatia46/Reliance-Stock-prediction-using-SVM/blob/master/SVM%20to%20predict%20Reliance%20Stock.ipynb
     from sklearn import datasets
     import matplotlib.pyplot as plt
     for i in range(len(tickers)):
@@ -468,8 +467,8 @@ if __name__ == '__main__':
     kf=KFold(n_splits=2, random_state=None, shuffle=False)
 
     for train_index, test_index in kf.split(X):
-...     X_train, X_test = X[train_index], X[test_index]
-...     y_train, y_test = y[train_index], y[test_index]
+        X_train, X_test = X[train_index], X[test_index]
+        y_train, y_test = y[train_index], y[test_index]
 
 
     split = int(len(df_api) * 0.7)
